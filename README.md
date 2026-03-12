@@ -46,6 +46,7 @@ The manifest.json file is used to configure the PWA (Progressive Web App) settin
 - Docker
 - MUI
 - ESLint
+- FontAwesome
 
 ## Common topics
 ### Environment variables
