@@ -2,14 +2,18 @@ import {
   Avatar,
   BottomNavigation,
   BottomNavigationAction,
-  Box,
-  Fab,
 } from "@mui/material";
 import { FaHouse, FaCirclePlus } from "react-icons/fa6";
 
-const NavBar = (): React.ReactNode => {
+import "./app.css";
+
+const App = () => {
   return (
     <>
+      <div id="header">
+        <h1>Home</h1>
+      </div>
+
       <BottomNavigation
         showLabels={true}
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
@@ -23,4 +27,5 @@ const NavBar = (): React.ReactNode => {
     </>
   );
 };
-export { NavBar };
+
+export default App;

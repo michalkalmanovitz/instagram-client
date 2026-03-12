@@ -7,6 +7,6 @@ export enum ROUTES {
 export const routes: RouteObject[] = [
   {
     path: ROUTES.HOME,
-    lazy: () => import("../../components/pages/home/Home"),
+    lazy: () => import("../../components/app/app"),
   },
 ];

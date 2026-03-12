@@ -12,7 +12,7 @@ import { authRequest } from "./config/msal/authConfig";
 import queryClient from "./config/queries/queryClient";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./config/router/router";
-import { NavBar } from "./components/navbar/NavBar";
+import App from "./components/app/app";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <MsalAuthenticationTemplate
         interactionType={InteractionType.Redirect}
         authenticationRequest={authRequest}
-        loadingComponent={() => <NavBar />}
+        loadingComponent={() => <App />}
       >
         <AuthWrapper>
           <QueryClientProvider client={queryClient}>
