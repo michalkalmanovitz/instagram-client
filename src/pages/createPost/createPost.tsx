@@ -1,8 +1,14 @@
+import { Button } from "@mui/material";
+import { FaAngleLeft } from "react-icons/fa6";
 import "./createPost.css";
 
 const CreatePost = () => {
   return (
     <>
+      <Button onClick={() => window.history.back()} id="back-button">
+        <FaAngleLeft />
+      </Button>
+
       <div className="createPostContainer">
         <div className="createPostCard">
           <input

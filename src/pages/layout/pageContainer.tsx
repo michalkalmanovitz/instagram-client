@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Modal, Tooltip } from "@mui/material";
 import "./pageContainer.css";
 import { Outlet, useLocation } from "react-router-dom";
 import { APP_ROUTES } from "../../config/router/routes";
@@ -24,7 +24,7 @@ const PageContainer = () => {
         <div className="bottom-nav">
           {APP_ROUTES.map((route) => (
             <a key={route.path} href={route.path}>
-              {route.icon}
+              <Tooltip title={route.title}>{route.icon}</Tooltip>
             </a>
           ))}
         </div>
