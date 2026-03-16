@@ -1,0 +1,9 @@
+#scroll {
+  overflow: auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}

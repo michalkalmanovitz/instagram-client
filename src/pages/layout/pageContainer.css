@@ -1,0 +1,49 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 161, 161);
+}
+
+.app-container {
+  width: 45%;
+  height: 100vh;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 30px;
+  box-shadow: 0 0px 8px 2px rgb(199, 191, 191);
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bottom-nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0px 8px 2px rgb(199, 191, 191);
+}
+
+.bottom-nav a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}

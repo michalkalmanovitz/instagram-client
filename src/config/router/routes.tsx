@@ -1,12 +1,28 @@
-import { RouteObject } from "react-router-dom";
+import { FaHouse, FaCirclePlus } from "react-icons/fa6";
+import { Avatar } from "@mui/material";
+import HomePage from "../../pages/homepage/homepage";
+import CreatePost from "../../pages/createPost/createPost";
+import Profile from "../../pages/profile/profile";
+import { AppRoute } from "./types";
 
-export enum ROUTES {
-  HOME = "/",
-}
-
-export const routes: RouteObject[] = [
+export const APP_ROUTES: AppRoute[] = [
   {
-    path: ROUTES.HOME,
-    lazy: () => import("../../components/app/app"),
+    path: "/",
+    element: <HomePage />,
+    icon: <FaHouse />,
+    title: "Home",
+  },
+  {
+    path: "/create-post",
+    element: <CreatePost />,
+    icon: <FaCirclePlus />,
+    title: "Create Post",
+
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+    icon: <Avatar alt="avatar" src="" sx={{ width: 20, height: 20 }} />,
+    title: "Profile",
   },
 ];

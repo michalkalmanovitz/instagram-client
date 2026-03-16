@@ -1,0 +1,11 @@
+#post {
+  width: 450px;
+  margin: 100px auto;
+  box-shadow: 0 0px 8px 2px rgb(226, 205, 205);
+  border-radius: 10px;
+}
+
+.likeCount {
+  font-size: 14px;
+  font-family: cursive;
+}

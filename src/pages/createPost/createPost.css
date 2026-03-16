@@ -1,0 +1,40 @@
+.createPostContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: cursive;
+}
+
+.createPostCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 0px 8px 2px rgb(184, 183, 183);
+}
+
+.createPostTitle {
+  font-family: fantasy;
+}
+
+.createPostInput {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.createPostButton {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(176, 171, 177);
+  color: white;
+  cursor: pointer;
+}
+
+.createPostButton:hover {
+  background-color: rgb(66, 64, 66);
+}

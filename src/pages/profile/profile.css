@@ -1,0 +1,19 @@
+#data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;    
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
+#scroll {
+  overflow: auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}
