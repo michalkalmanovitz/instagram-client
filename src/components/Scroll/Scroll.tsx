@@ -1,14 +1,18 @@
 import Post from "../post/post.tsx";
+import { PostType } from "../../types/post";
 import "./Scroll.css";
 
-const Scroll = () => {
+interface scrollProps {
+  posts: PostType[];
+}
+
+const Scroll = ({ posts }: scrollProps) => {
   return (
     <>
       <div id="scroll">
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {posts.map((post) => (
+          <Post post={post} />
+        ))}
       </div>
     </>
   );
