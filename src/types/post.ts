@@ -1,12 +1,16 @@
-import { User } from "./user";
+import { UserType } from "./user";
 
-export type Post = NewPost & {
+export type PostType = {
   id: string;
-};
-
-export type NewPost = {
+  userLiked: boolean;
+  likesCount: number;
   createdAt: Date;
   photoSrc: string;
-  likes: number;
-  user: User;
+  user: UserType;
+  likedBy: UserType[];
+};
+
+export type NewPostType = {
+  photoSrc: string;
+  userName: string;
 };

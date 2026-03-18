@@ -9,13 +9,14 @@ import { axiosInstance } from "../../config/queries/axiosInstance";
 export function useSimpleQuery<T>(
   url: string,
   queryKey?: string[],
-  options?: UseQueryOptions<T, AxiosError>
+  options?: UseQueryOptions<T, AxiosError>,
 ): UseQueryResult<T, AxiosError> {
   return useQuery<T, AxiosError>({
-    queryKey: queryKey ?? url.split("/").filter(Boolean),
+    queryKey: queryKey ?? ["query", url],
     queryFn: async () => {
-      const response: AxiosResponse<T> = await axiosInstance.get<T>(url);
-      return response.data;
+      const response: AxiosResponse<{ data: T }> = await axiosInstance.get(url);
+
+      return response.data.data;
     },
     ...options,
   });
