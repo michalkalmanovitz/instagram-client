@@ -9,3 +9,9 @@
   font-size: 14px;
   font-family: cursive;
 }
+
+#cardHeader {
+  background-color: white;
+  height: 0;
+  cursor: pointer;
+}

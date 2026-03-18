@@ -6,6 +6,7 @@ import { APP_ROUTES } from "../../config/router/routes";
 const PageContainer = () => {
   const location = useLocation();
 
+
   const currentRoute = APP_ROUTES.find(
     (route) => route.path === location.pathname,
   );

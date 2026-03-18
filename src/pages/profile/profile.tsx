@@ -3,16 +3,16 @@ import Scroll from "../../components/Scroll/Scroll";
 import "./profile.css";
 import { useUserPosts } from "../../hooks/usePosts";
 import { useUser } from "../../hooks/useUser";
-import { UserType } from "../../types/user";
+import { useLocation } from "react-router-dom";
+import { Button } from "@mui/material";
+import { FaAngleLeft } from "react-icons/fa6";
 
-interface ProfileProps {
-  user?: UserType;
-}
-
-const Profile = ({ user }: ProfileProps) => {
+const Profile = () => {
   const { data: currUser } = useUser();
 
-  const activeUser = user ?? currUser;
+  const location = useLocation();
+  const { sentUser } = location.state || {};
+  const activeUser = sentUser ?? currUser;
 
   const { data: posts = [] } = useUserPosts(activeUser?.name);
 
@@ -20,6 +20,13 @@ const Profile = ({ user }: ProfileProps) => {
 
   return (
     <>
+      {sentUser ? (
+        <Button onClick={() => window.history.back()} id="back-button">
+          <FaAngleLeft />
+        </Button>
+      ) : (
+        <></>
+      )}
       <div id="data">
         <Avatar
           alt="avatar"

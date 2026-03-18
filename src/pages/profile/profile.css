@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;    
+  padding: 25px;
   font-size: 20px;
   font-family: cursive;
   text-align: center;
@@ -16,4 +16,17 @@
 
 #scroll::-webkit-scrollbar {
   display: none;
+}
+
+#back-button {
+  width: fit-content;
+  margin: 1rem;
+  margin-bottom: -10px;
+  color: black;
+  font-size: large;
+}
+
+#back-button:hover {
+  color: white;
+  background-color: rgb(176, 171, 177);
 }

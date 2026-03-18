@@ -8,6 +8,7 @@ import { PostType } from "../../types/post";
 import { Card, CardHeader } from "@mui/material";
 import { useDislikePost, useLikePost } from "../../hooks/usePosts";
 import { useUser } from "../../hooks/useUser";
+import { useNavigate } from "react-router-dom";
 
 type PostProps = {
   post: PostType;
@@ -44,20 +45,31 @@ const Post = ({ post }: PostProps) => {
       username: currUser.name,
     });
   };
+  const navigate = useNavigate();
+
+  const goToProfile = () => {
+    navigate("/profile", {
+      state: {
+        sentUser: post.user,
+      },
+    });
+  };
 
   return (
-    <Card id="post">
-      <CardHeader
-        avatar={
-          <Avatar
-            alt="avatar"
-            src={post.user.avatarSrc}
-            sx={{ width: 30, height: 30 }}
-          />
-        }
-        title={post.user.name}
-        subheader={parseDate(post.createdAt)}
-      />
+    <Card id="post" key={post.id}>
+      <button id="cardHeader" onClick={goToProfile}>
+        <CardHeader
+          avatar={
+            <Avatar
+              alt="avatar"
+              src={post.user.avatarSrc}
+              sx={{ width: 30, height: 30 }}
+            />
+          }
+          title={post.user.name}
+          subheader={parseDate(post.createdAt)}
+        />
+      </button>
 
       <CardMedia
         component="img"
