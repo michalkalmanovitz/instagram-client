@@ -12,6 +12,8 @@ const Profile = () => {
 
   const location = useLocation();
   const { sentUser } = location.state || {};
+  window.history.replaceState({}, "");
+
   const activeUser = sentUser ?? currUser;
 
   const { data: posts = [] } = useUserPosts(activeUser?.name);
