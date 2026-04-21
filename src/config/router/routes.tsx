@@ -1,8 +1,8 @@
 import { FaHouse, FaCirclePlus } from "react-icons/fa6";
 import { Avatar } from "@mui/material";
-import HomePage from "../../pages/homepage/homepage";
-import CreatePost from "../../pages/createPost/createPost";
-import Profile from "../../pages/profile/profile";
+import HomePage from "../../features/homepage/homepage";
+import CreatePost from "../../features/createPost/createPost";
+import Profile from "../../features/profile/profile";
 import { AppRoute } from "./types";
 
 export const APP_ROUTES: AppRoute[] = [

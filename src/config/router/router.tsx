@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { APP_ROUTES } from "./routes";
-import PageContainer from "../../pages/layout/pageContainer";
+import PageContainer from "../../components/layout/pageContainer";
 
 export const router = createBrowserRouter([
   {

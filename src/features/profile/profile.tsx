@@ -3,7 +3,7 @@ import Scroll from "../../components/Scroll/Scroll";
 import "./profile.css";
 import { useUserPosts } from "../../hooks/usePosts";
 import { useUser } from "../../hooks/useUser";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { FaAngleLeft } from "react-icons/fa6";
 
@@ -14,6 +14,9 @@ const Profile = () => {
   const { sentUser } = location.state || {};
   window.history.replaceState({}, "");
 
+    const navigate = useNavigate();
+
+
   const activeUser = sentUser ?? currUser;
 
   const { data: posts = [] } = useUserPosts(activeUser?.name);
@@ -23,7 +26,7 @@ const Profile = () => {
   return (
     <>
       {sentUser ? (
-        <Button onClick={() => window.history.back()} id="back-button">
+        <Button onClick={() => navigate(-1)} id="back-button">
           <FaAngleLeft />
         </Button>
       ) : (
